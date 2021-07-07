@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom'
 import moment from 'moment'
 
 const Profile = (props) => {
-  const age = moment(props.user.birthDate).format('DD MMM YY');
+  const age = moment(props.userData.birthDate).format('DD MMM YY');
   return (
-    <>
-      <div className="profile__name">{`${props.user.firstName} ${props.user.lastName}`}</div>
-      <div className="profile__birth">{`Was born ${age} in ${props.user.birthPlace}`}</div>
-    </>
+    <div className="profile">
+      <div className="profile__name">{`${props.userData.firstName} ${props.userData.lastName}`}</div>
+      <div className="profile__birth">{`Was born ${age} in ${props.userData.birthPlace}`}</div>
+    </div>
   );
 };
 
