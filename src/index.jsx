@@ -5,19 +5,16 @@ import './index.scss';
 
 const rootElemnt = document.querySelector('#root');
 
-/*const userData = {
+const userData = {
   firstName: 'John',
   lastName: 'Doe',
   birthDate: '1991-01-17T11:11:11.819Z',
   birthPlace: 'London',
-};*/
+};
 
 ReactDOM.render(
   <Profile
-    firstName="John"
-    lastName="Doe"
-    birthDate="1991-01-17T11:11:11.819Z"
-    birthPlace="London"
+    user={userData}
   />,
   rootElemnt
 );
